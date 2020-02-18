@@ -1,0 +1,17 @@
+#HTTP Server
+server:
+  port: 1115
+
+#Discovery Server Access
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+      default-zone: http://localhost:8761
+  instance:
+    status-page-url-path: /infoTareo
+    health-check-url-path: /healthTareo
+    metadata-map:
+       app-owner: pcarranza
+       description: application for quiz
